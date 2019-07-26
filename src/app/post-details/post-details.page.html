@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/posts"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ data?.title.rendered }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding>
+  
+  <div *ngIf="data">
+    <img [src]="data.media_url">
+    <div [innerHTML]="data.content.rendered" padding></div>
+  </div>
+ 
+</ion-content>
